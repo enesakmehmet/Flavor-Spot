@@ -15,7 +15,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Menemen",
         price: 45,
         category: "breakfast",
-        image: "https://images.unsplash.com/photo-1635363638580-c2809d049ebc?ixlib=rb-4.0.3",
+        image: "img/images.jpeg",
         description: "Geleneksel Türk kahvaltı yemeği. Taze domates, biber ve yumurtanın mükemmel uyumu. Tereyağında hazırlanır ve isteğe göre peynir ilavesi yapılabilir.",
         ingredients: ["Domates", "Biber", "Yumurta", "Tereyağı", "Tuz", "Karabiber", "İsteğe Bağlı Peynir"]
     },
@@ -24,7 +24,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Sahanda Yumurta",
         price: 35,
         category: "breakfast",
-        image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0d5f?ixlib=rb-4.0.3",
+        image: "img/sahanda yumruta.webp",
         description: "Tereyağında kızarmış, sarısı akan nefis yumurta. Yanında taze ekmek ve domates ile servis edilir.",
         ingredients: ["Yumurta", "Tereyağı", "Tuz", "Karabiber"]
     },
@@ -44,7 +44,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Domates Çorbası",
         price: 30,
         category: "soups",
-        image: "https://images.unsplash.com/photo-1608462519619-43f52deb4c26?ixlib=rb-4.0.3",
+        image: "img/domatescorbasi2.webp",
         description: "Taze domateslerle hazırlanan, kremalı ve aromatik çorba. Üzerine krema ve kıtır ekmek ile servis edilir.",
         ingredients: ["Domates", "Soğan", "Sarımsak", "Krema", "Tereyağı", "Tuz", "Karabiber", "Kekik"]
     },
@@ -169,7 +169,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Ton Balıklı Salata",
         price: 70,
         category: "salads",
-        image: "https://images.unsplash.com/photo-1511357840105-748c95f0a7e4?ixlib=rb-4.0.3",
+        image: "img/ton-balikli-salata-17.webp",
         description: "Ton balığı, marul ve taze sebzelerle hazırlanan salata. Zeytinyağı ve limon sosu ile servis edilir.",
         ingredients: ["Ton Balığı", "Marul", "Domates", "Salatalık", "Zeytinyağı", "Limon"]
     },
@@ -247,7 +247,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Kıymalı Gözleme",
         price: 50,
         category: "gozleme",
-        image: "https://images.unsplash.com/photo-1628689529124-b7e96e975c1e?ixlib=rb-4.0.3",
+        image: "img/Kıymalı Gözleme 2.webp",
         description: "Dana kıyma ile hazırlanan gözleme. Yanında domates ve salatalık ile servis edilir.",
         ingredients: ["Dana Kıyma", "Un", "Tuz", "Su"]
     },
@@ -256,7 +256,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Patatesli Gözleme",
         price: 45,
         category: "gozleme",
-        image: "https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?ixlib=rb-4.0.3",
+        image: "img/Kıymalı Gözleme.webp",
         description: "Patates püresi ile hazırlanan gözleme. Yanında domates ve salatalık ile servis edilir.",
         ingredients: ["Patates", "Un", "Tuz", "Su"]
     },
@@ -267,7 +267,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Türk Kahvesi",
         price: 30,
         category: "drinks",
-        image: "https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?ixlib=rb-4.0.3",
+        image: "img/türk kahvesi.jpg",
         description: "Geleneksel Türk kahvesi. Yanında lokum ile servis edilir.",
         ingredients: ["Türk Kahvesi", "Su", "Şeker"]
     },
@@ -276,7 +276,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Ayran",
         price: 15,
         category: "drinks",
-        image: "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?ixlib=rb-4.0.3",
+        image: "img/ayran.jpg",
         description: "Taze yoğurt ile hazırlanan ayran. Serinletici ve ferahlatıcı.",
         ingredients: ["Yoğurt", "Su", "Tuz"]
     },
@@ -296,7 +296,7 @@ let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [
         name: "Künefe",
         price: 60,
         category: "desserts",
-        image: "https://images.unsplash.com/photo-1576792741433-6d2888f45d01?ixlib=rb-4.0.3",
+        image: "img/künefe.jpg",
         description: "Geleneksel Antep fıstıklı künefe. Özel peyniri ve kadayıf teliyle hazırlanır, sıcak servis edilir.",
         ingredients: ["Kadayıf", "Özel Peynir", "Tereyağı", "Antep Fıstığı", "Şerbet"]
     },
@@ -375,7 +375,7 @@ menuItems.push(
         name: "Falafel Tabağı",
         price: 75,
         category: "vegetarian",
-        image: "https://images.unsplash.com/photo-1593001874117-c99c800e3eb7?ixlib=rb-4.0.3",
+        image: "img/Falafel Tabağı.jpg",
         description: "Nohuttan yapılmış geleneksel falafel. Humus ve salatayla servis edilir.",
         ingredients: ["Nohut", "Maydanoz", "Soğan", "Sarımsak", "Kimyon", "Kişniş"]
     }
