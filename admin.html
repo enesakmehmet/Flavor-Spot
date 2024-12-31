@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lezzet Durağı - Admin Paneli</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <i class="fas fa-utensils"></i>
+          <span>Lezzet Durağı</span>
+        </div>
+        <nav>
+          <a href="#" class="active" data-page="dashboard">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" data-page="products">
+            <i class="fas fa-hamburger"></i>
+            <span>Ürünler</span>
+          </a>
+          <a href="#" data-page="categories">
+            <i class="fas fa-tags"></i>
+            <span>Kategoriler</span>
+          </a>
+          <a href="#" data-page="orders">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Siparişler</span>
+          </a>
+          <a href="#" data-page="statistics">
+            <i class="fas fa-chart-bar"></i>
+            <span>İstatistikler</span>
+          </a>
+          <a href="#" data-page="settings">
+            <i class="fas fa-cog"></i>
+            <span>Ayarlar</span>
+          </a>
+          <a href="index.html" class="back-to-site">
+            <i class="fas fa-arrow-left"></i>
+            <span>Siteye Dön</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <header>
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Admin panelinde ara..." />
+          </div>
+          <div class="header-right">
+            <div class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+            <div class="admin-profile">
+              <img src="https://via.placeholder.com/40" alt="Admin" />
+              <span>Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Restaurant Info Banner -->
+        <div class="restaurant-banner">
+          <div class="banner-content">
+            <h1>Lezzet Durağı</h1>
+            <p class="slogan">"Eşsiz Lezzetlerin Adresi"</p>
+            <div class="restaurant-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Merkez Mah. Lezzet Cad. No: 123</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+90 555 123 4567</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Her gün 09:00 - 23:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="page-content" id="dashboard">
+          <div class="stats-cards">
+            <div class="stat-card">
+              <i class="fas fa-utensils"></i>
+              <div class="stat-info">
+                <h3>Toplam Ürün</h3>
+                <p class="total-products">44</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-shopping-cart"></i>
+              <div class="stat-info">
+                <h3>Günlük Sipariş</h3>
+                <p class="daily-orders">27</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-lira-sign"></i>
+              <div class="stat-info">
+                <h3>Günlük Gelir</h3>
+                <p class="daily-revenue">2,450 ₺</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-users"></i>
+              <div class="stat-info">
+                <h3>Müşteri Sayısı</h3>
+                <p class="total-customers">156</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Features -->
+          <div class="features-section">
+            <h2>Özelliklerimiz</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <i class="fas fa-star"></i>
+                <h3>Kaliteli Hizmet</h3>
+                <p>Profesyonel ekibimizle en iyi hizmeti sunuyoruz</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-award"></i>
+                <h3>Ödüllü Mutfak</h3>
+                <p>Deneyimli şeflerimizle lezzet garantisi</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Taze Malzemeler</h3>
+                <p>Günlük taze ürünlerle hazırlanan yemekler</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-truck"></i>
+                <h3>Hızlı Teslimat</h3>
+                <p>30 dakika içinde kapınızda</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Offers -->
+          <div class="special-offers">
+            <h2>Özel Kampanyalar</h2>
+            <div class="offers-grid">
+              <div class="offer-card">
+                <div class="offer-content">
+                  <h3>Öğle Menüsü</h3>
+                  <p>Hafta içi 12:00-15:00 arası %20 indirim</p>
+                  <span class="offer-tag">%20</span>
+                </div>
+              </div>
+              <div class="offer-card">
+                <div class="offer-content">
+                  <h3>Aile Paketi</h3>
+                  <p>4 kişilik özel menüde %15 indirim</p>
+                  <span class="offer-tag">%15</span>
+                </div>
+              </div>
+              <div class="offer-card">
+                <div class="offer-content">
+                  <h3>Happy Hour</h3>
+                  <p>16:00-18:00 arası tüm içeceklerde %25 indirim</p>
+                  <span class="offer-tag">%25</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Page -->
+        <div class="page-content hidden" id="products">
+          <h2>Ürün Yönetimi</h2>
+          <div class="product-controls">
+            <div class="product-filters">
+              <select id="categoryFilter">
+                <option value="all">Tüm Kategoriler</option>
+                <option value="breakfast">Kahvaltılar</option>
+                <option value="soups">Çorbalar</option>
+                <option value="meat">Et Yemekleri</option>
+                <option value="chicken">Tavuk Yemekleri</option>
+                <option value="pasta">Makarnalar</option>
+                <option value="salads">Salatalar</option>
+                <option value="pizza">Pizzalar</option>
+                <option value="burger">Burgerler</option>
+                <option value="gozleme">Gözlemeler</option>
+                <option value="drinks">İçecekler</option>
+                <option value="desserts">Tatlılar</option>
+              </select>
+              <input type="text" placeholder="Ürün ara..." id="productSearch" />
+            </div>
+          </div>
+
+          <div class="products-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Resim</th>
+                  <th>Ürün Adı</th>
+                  <th>Kategori</th>
+                  <th>Fiyat</th>
+                  <th>Stok</th>
+                  <th>Durum</th>
+                  <th>İşlemler</th>
+                </tr>
+              </thead>
+              <tbody id="productsTableBody">
+                <!-- Ürünler JavaScript ile doldurulacak -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

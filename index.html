@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lezzet Durağı - Eşsiz lezzetlerin adresi. Kahvaltı, öğle ve akşam yemeği için en iyi seçim. Taze ve lezzetli yemekler, profesyonel servis."
+    />
+    <meta
+      name="keywords"
+      content="restoran, cafe, yemek, kahvaltı, öğle yemeği, akşam yemeği, Türk mutfağı, lezzetli yemekler"
+    />
+    <meta name="author" content="Lezzet Durağı" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Lezzet Durağı - Eşsiz Lezzetlerin Adresi"
+    />
+    <meta
+      property="og:description"
+      content="Kahvaltıdan akşam yemeğine, taze ve lezzetli yemekleriyle hizmetinizdeyiz."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3"
+    />
+    <meta property="og:url" content="https://lezzetduragi.com" />
+    <link rel="canonical" href="https://lezzetduragi.com" />
+    <title>Lezzet Durağı - Eşsiz Lezzetlerin Adresi</title>
+
+    <!-- Preload önemli kaynaklar -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="script.js" as="script" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+    />
+
+    <!-- Stil dosyaları -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- QR Code kütüphanesi - defer ile yükleme -->
+    <script
+      src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"
+      defer
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  </head>
+  <body>
+    <div class="new-year-message">2025 Hoşgeldin</div>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Lezzet Durağı</h1>
+        <p class="hero-slogan">"Eşsiz Lezzetlerin Adresi"</p>
+        <div class="hero-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Merkez Mah. Lezzet Cad. No: 123</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+90 555 123 4567</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <span>Her gün 09:00 - 23:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Controls -->
+    <div class="container">
+      <div class="menu-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Menüde ara..." />
+        </div>
+        <div class="sort-box">
+          <select id="sortSelect">
+            <option value="default">Varsayılan Sıralama</option>
+            <option value="priceAsc">Fiyat (Düşükten Yükseğe)</option>
+            <option value="priceDesc">Fiyat (Yüksekten Düşüğe)</option>
+            <option value="nameAsc">İsim (A-Z)</option>
+            <option value="nameDesc">İsim (Z-A)</option>
+          </select>
+        </div>
+        <div class="view-options">
+          <button id="gridView" class="view-btn active">
+            <i class="fas fa-th"></i>
+          </button>
+          <button id="listView" class="view-btn">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-categories">
+        <button class="category-btn active" data-category="all">
+          <i class="fas fa-utensils"></i>
+          <span>Tümü</span>
+        </button>
+        <button class="category-btn" data-category="breakfast">
+          <i class="fas fa-egg"></i>
+          <span>Kahvaltılar</span>
+        </button>
+        <button class="category-btn" data-category="soups">
+          <i class="fas fa-bowl-food"></i>
+          <span>Çorbalar</span>
+        </button>
+        <button class="category-btn" data-category="meat">
+          <i class="fas fa-drumstick-bite"></i>
+          <span>Et Yemekleri</span>
+        </button>
+        <button class="category-btn" data-category="chicken">
+          <i class="fas fa-drumstick-bite"></i>
+          <span>Tavuk Yemekleri</span>
+        </button>
+        <button class="category-btn" data-category="pasta">
+          <i class="fas fa-wheat-awn"></i>
+          <span>Makarnalar</span>
+        </button>
+        <button class="category-btn" data-category="salads">
+          <i class="fas fa-leaf"></i>
+          <span>Salatalar</span>
+        </button>
+        <button class="category-btn" data-category="pizza">
+          <i class="fas fa-pizza-slice"></i>
+          <span>Pizzalar</span>
+        </button>
+        <button class="category-btn" data-category="burger">
+          <i class="fas fa-hamburger"></i>
+          <span>Burgerler</span>
+        </button>
+        <button class="category-btn" data-category="gozleme">
+          <i class="fas fa-bread-slice"></i>
+          <span>Gözlemeler</span>
+        </button>
+        <button class="category-btn" data-category="drinks">
+          <i class="fas fa-coffee"></i>
+          <span>İçecekler</span>
+        </button>
+        <button class="category-btn" data-category="desserts">
+          <i class="fas fa-ice-cream"></i>
+          <span>Tatlılar</span>
+        </button>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="menu-items" id="menuItems">
+        <!-- Items will be added dynamically -->
+      </div>
+
+      <!-- Quick Navigation -->
+      <div class="quick-nav">
+        <button id="callWaiter" class="call-waiter-btn">
+          <i class="fas fa-bell"></i>
+          <span>Garson Çağır</span>
+        </button>
+        <button id="reserveTable" class="reserve-table-btn">
+          <i class="fas fa-chair"></i>
+          <span>Masa Rezervasyonu</span>
+        </button>
+        <button id="favorites" class="favorites-btn">
+          <i class="fas fa-heart"></i>
+          <span>Favorilerim</span>
+          <span class="favorites-count">0</span>
+        </button>
+        <button id="orderTracking" class="order-tracking-btn">
+          <i class="fas fa-truck"></i>
+          <span>Sipariş Takibi</span>
+        </button>
+        <button id="scrollTop" class="scroll-btn">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="itemModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-left">
+            <img src="" alt="" id="modalImage" class="modal-image" />
+            <div class="image-gallery">
+              <div class="gallery-thumbs" id="galleryThumbs">
+                <!-- Thumbnail images will be added here -->
+              </div>
+            </div>
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice" class="modal-price"></p>
+            <div class="modal-description">
+              <h3>Ürün Açıklaması</h3>
+              <p id="modalDescription"></p>
+            </div>
+            <div class="modal-ingredients">
+              <h3>İçindekiler</h3>
+              <ul id="modalIngredients"></ul>
+            </div>
+            <div class="nutrition-info">
+              <h3>Besin Değerleri</h3>
+              <div class="nutrition-grid" id="nutritionInfo">
+                <!-- Nutrition info will be added here -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-right">
+            <div class="qr-section">
+              <h3>QR Kod</h3>
+              <div id="qrcode"></div>
+              <p class="qr-info">Menüyü görüntülemek için QR kodu tarayın</p>
+            </div>
+            <div class="share-section">
+              <h3>Paylaş</h3>
+              <div class="share-buttons">
+                <button class="share-btn" data-platform="whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="share-btn" data-platform="facebook">
+                  <i class="fab fa-facebook"></i>
+                </button>
+                <button class="share-btn" data-platform="twitter">
+                  <i class="fab fa-twitter"></i>
+                </button>
+              </div>
+            </div>
+            <div class="rating-section">
+              <h3>Değerlendirme</h3>
+              <div class="stars" id="ratingStars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+              <p class="rating-count">
+                (<span id="ratingCount">0</span> değerlendirme)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masa Rezervasyon Modal -->
+    <div class="modal" id="reservationModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Masa Rezervasyonu</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Ad Soyad</label>
+            <input type="text" id="reservationName" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Telefon</label>
+            <input type="tel" id="reservationPhone" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-users"></i> Kişi Sayısı</label>
+            <select id="reservationGuests" required>
+              <option value="">Seçiniz</option>
+              <option value="1-2">1-2 Kişi</option>
+              <option value="3-4">3-4 Kişi</option>
+              <option value="5-6">5-6 Kişi</option>
+              <option value="7+">7+ Kişi</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-calendar"></i> Tarih</label>
+            <input type="date" id="reservationDate" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-clock"></i> Saat</label>
+            <input type="time" id="reservationTime" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-comment"></i> Özel İstekler</label>
+            <textarea id="reservationNotes"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Rezervasyon Yap</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Favoriler Modal -->
+    <div class="modal" id="favoritesModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Favori Menülerim</h2>
+        <div class="favorites-list" id="favoritesList">
+          <!-- Favoriler buraya eklenecek -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Sipariş Takip Modal -->
+    <div class="modal" id="orderTrackingModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Sipariş Takibi</h2>
+        <div class="order-tracking-form">
+          <div class="form-group">
+            <label><i class="fas fa-hashtag"></i> Sipariş Numarası</label>
+            <input
+              type="text"
+              id="orderNumber"
+              placeholder="Sipariş numaranızı giriniz"
+            />
+            <button id="trackOrder" class="track-btn">Siparişi Takip Et</button>
+          </div>
+        </div>
+        <div class="order-status" id="orderStatus">
+          <!-- Sipariş durumu buraya eklenecek -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Sepet Modal -->
+    <div class="modal" id="cartModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Sepetim</h2>
+        <div class="cart-items" id="cartItems">
+          <!-- Sepet öğeleri buraya eklenecek -->
+        </div>
+        <div class="cart-total">
+          <span>Toplam:</span>
+          <span id="cartTotal">0 ₺</span>
+        </div>
+        <button id="checkoutBtn" class="checkout-btn">Siparişi Tamamla</button>
+      </div>
+    </div>
+
+    <!-- Bildirim Alanı -->
+    <div class="notifications-container" id="notificationsContainer">
+      <!-- Bildirimler buraya eklenecek -->
+    </div>
+
+    <!-- Müşteri Yorumları Modal -->
+    <div class="modal" id="reviewsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Müşteri Yorumları</h2>
+        <div class="reviews-container" id="reviewsContainer">
+          <!-- Yorumlar buraya eklenecek -->
+        </div>
+        <div class="add-review-form">
+          <h3>Yorum Ekle</h3>
+          <form id="reviewForm">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Ad Soyad</label>
+              <input type="text" id="reviewName" required />
+            </div>
+            <div class="rating-input">
+              <label>Puanınız:</label>
+              <div class="stars-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-comment"></i> Yorumunuz</label>
+              <textarea id="reviewText" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Yorum Ekle</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sadakat Puanları Modal -->
+    <div class="modal" id="loyaltyModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Sadakat Puanlarım</h2>
+        <div class="loyalty-info">
+          <div class="points-display">
+            <i class="fas fa-star"></i>
+            <span id="totalPoints">0</span>
+            <span>Puan</span>
+          </div>
+          <div class="loyalty-level">
+            <h3>Üyelik Seviyeniz</h3>
+            <div class="level-badge" id="loyaltyLevel">Bronze</div>
+          </div>
+          <div class="points-history">
+            <h3>Puan Geçmişi</h3>
+            <div id="pointsHistory">
+              <!-- Puan geçmişi buraya eklenecek -->
+            </div>
+          </div>
+          <div class="rewards-available">
+            <h3>Kullanılabilir Ödüller</h3>
+            <div class="rewards-grid" id="availableRewards">
+              <!-- Ödüller buraya eklenecek -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Özel Etkinlikler Modal -->
+    <div class="modal" id="eventsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Özel Etkinlikler</h2>
+        <div class="events-container">
+          <div class="upcoming-events" id="upcomingEvents">
+            <!-- Yaklaşan etkinlikler buraya eklenecek -->
+          </div>
+          <div class="event-registration">
+            <h3>Etkinlik Rezervasyonu</h3>
+            <form id="eventRegistrationForm">
+              <div class="form-group">
+                <label><i class="fas fa-calendar"></i> Etkinlik</label>
+                <select id="eventSelect" required>
+                  <option value="">Etkinlik Seçin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Katılımcı Sayısı</label>
+                <input type="number" id="eventGuests" min="1" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> E-posta</label>
+                <input type="email" id="eventEmail" required />
+              </div>
+              <button type="submit" class="submit-btn">Rezervasyon Yap</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hızlı Menü Önerileri -->
+    <div class="quick-suggestions">
+      <button id="showReviews" class="suggestion-btn">
+        <i class="fas fa-comments"></i>
+        <span>Yorumlar</span>
+      </button>
+      <button id="showLoyalty" class="suggestion-btn">
+        <i class="fas fa-crown"></i>
+        <span>Sadakat Puanları</span>
+      </button>
+      <button id="showEvents" class="suggestion-btn">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Özel Etkinlikler</span>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
