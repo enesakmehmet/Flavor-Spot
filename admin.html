@@ -224,6 +224,175 @@
             </table>
           </div>
         </div>
+
+        <!-- Categories Page -->
+        <div class="page-content hidden" id="categories">
+          <h2>Kategori Yönetimi</h2>
+          <div class="category-controls">
+            <button class="add-category-btn">
+              <i class="fas fa-plus"></i> Yeni Kategori Ekle
+            </button>
+          </div>
+          <div class="categories-grid">
+            <div class="category-card">
+              <div class="category-icon"><i class="fas fa-coffee"></i></div>
+              <h3>Kahvaltılar</h3>
+              <p>12 Ürün</p>
+              <div class="category-actions">
+                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+            <!-- Diğer kategori kartları benzer şekilde eklenecek -->
+          </div>
+        </div>
+
+        <!-- Orders Page -->
+        <div class="page-content hidden" id="orders">
+          <h2>Sipariş Yönetimi</h2>
+          <div class="order-filters">
+            <select id="orderStatus">
+              <option value="all">Tüm Siparişler</option>
+              <option value="pending">Bekleyen</option>
+              <option value="preparing">Hazırlanıyor</option>
+              <option value="delivering">Yolda</option>
+              <option value="completed">Tamamlandı</option>
+            </select>
+            <input type="date" id="orderDate" />
+          </div>
+          <div class="orders-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sipariş No</th>
+                  <th>Müşteri</th>
+                  <th>Ürünler</th>
+                  <th>Toplam</th>
+                  <th>Durum</th>
+                  <th>Tarih</th>
+                  <th>İşlemler</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                <!-- Siparişler JavaScript ile doldurulacak -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Statistics Page -->
+        <div class="page-content hidden" id="statistics">
+          <h2>İstatistikler</h2>
+          <div class="stats-filters">
+            <select id="statsPeriod">
+              <option value="daily">Günlük</option>
+              <option value="weekly">Haftalık</option>
+              <option value="monthly">Aylık</option>
+              <option value="yearly">Yıllık</option>
+            </select>
+          </div>
+          <div class="stats-grid">
+            <div class="stats-chart-card">
+              <h3>Satış Grafiği</h3>
+              <div class="chart-container">
+                <!-- Grafik JavaScript ile eklenecek -->
+              </div>
+            </div>
+            <div class="stats-chart-card">
+              <h3>En Çok Satan Ürünler</h3>
+              <div class="chart-container">
+                <!-- Grafik JavaScript ile eklenecek -->
+              </div>
+            </div>
+            <div class="stats-chart-card">
+              <h3>Kategori Dağılımı</h3>
+              <div class="chart-container">
+                <!-- Grafik JavaScript ile eklenecek -->
+              </div>
+            </div>
+            <div class="stats-chart-card">
+              <h3>Müşteri Memnuniyeti</h3>
+              <div class="chart-container">
+                <!-- Grafik JavaScript ile eklenecek -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div class="page-content hidden" id="settings">
+          <h2>Ayarlar</h2>
+          <div class="settings-grid">
+            <div class="settings-card">
+              <h3>Genel Ayarlar</h3>
+              <form class="settings-form">
+                <div class="form-group">
+                  <label>Restoran Adı</label>
+                  <input type="text" value="Lezzet Durağı" />
+                </div>
+                <div class="form-group">
+                  <label>Adres</label>
+                  <input type="text" value="Merkez Mah. Lezzet Cad. No: 123" />
+                </div>
+                <div class="form-group">
+                  <label>Telefon</label>
+                  <input type="tel" value="+90 555 123 4567" />
+                </div>
+                <div class="form-group">
+                  <label>E-posta</label>
+                  <input type="email" value="info@lezzetduragi.com" />
+                </div>
+                <button type="submit" class="save-btn">Kaydet</button>
+              </form>
+            </div>
+            <div class="settings-card">
+              <h3>Çalışma Saatleri</h3>
+              <form class="settings-form">
+                <div class="form-group">
+                  <label>Hafta İçi</label>
+                  <div class="time-inputs">
+                    <input type="time" value="09:00" />
+                    <span>-</span>
+                    <input type="time" value="23:00" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Hafta Sonu</label>
+                  <div class="time-inputs">
+                    <input type="time" value="10:00" />
+                    <span>-</span>
+                    <input type="time" value="23:00" />
+                  </div>
+                </div>
+                <button type="submit" class="save-btn">Kaydet</button>
+              </form>
+            </div>
+            <div class="settings-card">
+              <h3>Bildirim Ayarları</h3>
+              <form class="settings-form">
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" checked />
+                    Yeni sipariş bildirimleri
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" checked />
+                    Düşük stok bildirimleri
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" checked />
+                    Müşteri yorumları bildirimleri
+                  </label>
+                </div>
+                <button type="submit" class="save-btn">Kaydet</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="admin.js"></script>
