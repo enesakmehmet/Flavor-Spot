@@ -1339,11 +1339,41 @@ function showItemDetails(item) {
     const modalIngredients = document.getElementById('modalIngredients');
     const nutritionInfo = document.getElementById('nutritionInfo');
 
-    modalImage.src = item.image;
+    // Debug için resim URL'sini konsola yazdır
+    console.log('Resim URL:', item.image);
+
+    // Resim yüklenmeden önce loading göster
+    modalImage.style.opacity = '0';
+    
+    // Resmi yükle
+    const img = new Image();
+    img.onload = function() {
+        modalImage.src = this.src;
+        modalImage.style.opacity = '1';
+    };
+    
+    img.onerror = function() {
+        console.error('Resim yüklenemedi:', item.image);
+        modalImage.src = 'img/default-food.jpg';
+        modalImage.style.opacity = '1';
+    };
+    
+    // Resim URL'sini ayarla
+    if (item.image.startsWith('http')) {
+        // Eğer tam URL ise doğrudan kullan
+        img.src = item.image;
+    } else {
+        // Göreceli yol ise düzelt
+        img.src = `./${item.image}`;
+    }
+
     modalImage.alt = item.name;
     modalTitle.textContent = item.name;
     modalPrice.textContent = `${item.price} ₺`;
     modalDescription.textContent = item.description || "Bu ürün için henüz detaylı açıklama eklenmemiştir.";
+
+    // Modal'ı göster
+    modal.style.display = 'block';
 
     // İçindekiler listesini oluştur
     modalIngredients.innerHTML = '';
@@ -1376,17 +1406,6 @@ function showItemDetails(item) {
             <span>${item.nutrition.fat || 0}g</span>
         </div>
     ` : '<p>Besin değerleri bilgisi henüz eklenmemiştir.</p>';
-
-    // QR kodu oluştur
-    const qrcode = document.getElementById('qrcode');
-    qrcode.innerHTML = ''; // Önceki QR kodu temizle
-    new QRCode(qrcode, {
-        text: window.location.href,
-        width: 128,
-        height: 128
-    });
-
-    modal.style.display = 'block';
 }
 
 // Modal kapatma işlemi
